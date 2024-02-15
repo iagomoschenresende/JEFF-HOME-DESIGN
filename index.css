@@ -1,0 +1,472 @@
+/* Adicione ou ajuste estas regras CSS no seu arquivo index.css */
+
+/* Seu CSS existente aqui */
+
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+    background-color: rgb(62, 55, 55);
+}
+
+header figure {
+    margin: 0;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    margin-top: 20px;
+    border-radius: 20%;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 10px;
+    padding: 30px 0 0 0;
+    color: aquamarine;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.header-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-links a {
+        margin: 10px 0;
+    }
+}
+
+header a {
+    margin: 40px;
+    text-decoration: none;
+    /* Remove o sublinhado padrão */
+    color: #fff;
+    /* Cor do texto */
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 70px;
+    border: 2px solid aquamarine;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centraliza o conteúdo verticalmente e horizontalmente */
+    text-decoration: none;
+    /* Remove o sublinhado */
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Seu CSS existente aqui */
+
+
+
+
+/* Adicione uma media query para telas menores que 600px */
+@media only screen and (max-width: 600px) {
+    .branco img {
+        width: calc(100% - 40px);
+        /* Ocupa toda a largura da tela com algum espaço entre elas */
+        margin: 10px;
+    }
+}
+
+.main {
+    max-width: 920px;
+    margin: 0 auto;
+    /* Centraliza o conteúdo da main */
+}
+
+.branco {
+    display: flex;
+    max-width: 100%;
+    background-color: rgb(242, 224, 224);
+    height: auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* Permite que os itens se movam para a próxima linha quando a largura da tela é menor */
+}
+
+.branco img {
+    width: 17em;
+    border-radius: 1% 20%;
+    border: 5px solid black;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 30px;
+    margin: 20px;
+    width: 300px;
+    height: 250px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Adicione uma fonte bonita conforme suas preferências */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.service-name {
+    font-size: 24px;
+
+    font-weight: bold;
+    color: #333;
+    /* Cor do texto */
+}
+
+.service-description {
+    font-size: 16px;
+    color: #666;
+    /* Cor do texto */
+
+}
+
+.service-provider {
+
+    font-weight: bold;
+    color: #333;
+    /* Cor do texto */
+}
+
+.service-provider-highlight {
+
+    color: #ff6347;
+    /* Cor destacada */
+}
+
+.card img {
+    max-width: 80%;
+    height: 40%;
+    /* Adicione estas propriedades para garantir que a imagem não ultrapasse os limites da div */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.instagram-prompt {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.instagram-prompt-heading {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.instagram-prompt-heading .instagram-prompt-year {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.instagram-prompt-text {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.instagram-prompt-link {
+    font-size: 24px;
+    color: #0077ff;
+    text-decoration: none;
+}
+
+.instagram-prompt-link:hover {
+    text-decoration: underline;
+}
+
+.instagram-images {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.instagram-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    /* Ajuste conforme necessário */
+}
+
+.botoes a {
+    margin: 0 30px;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .botoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botoes a {
+        margin: 10px 0;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 920px) {
+
+
+    .container {
+        flex-direction: column;
+        /* Altera a direção do flexbox para coluna */
+    }
+
+
+}
+
+
+
+
+.estrelas {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    /* ou a fonte que você preferir */
+    max-width: 1600px;
+    /* definindo a largura máxima da div */
+    margin: 0 auto;
+    /* centralizando horizontalmente */
+    background-color: #000000;
+    /* cor de fundo cinza */
+    padding: 100px;
+    /* espaçamento interno para afastar o conteúdo da borda */
+}
+
+
+.stars {
+    color: gold;
+    /* cor amarela */
+    font-size: 24px;
+    /* tamanho da fonte das estrelas */
+}
+
+.estrelas h1 {
+    color: #ffffff;
+    font-size: 18px;
+    /* tamanho da fonte do texto */
+    line-height: 1.5;
+    /* altura da linha para melhor legibilidade */
+    padding: 30px;
+}
+
+
+.container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    /* Aumentando a largura máxima */
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.question {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff0000;
+}
+
+.answer {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.grade {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    max-width: 300px;
+    /* Estabelece o limite de largura */
+    max-height: 200px;
+    /* Estabelece o limite de altura */
+    object-fit: cover;
+    /* Garante que a imagem cubra o espaço especificado */
+    border: 3px solid #ffffff;
+    /* Adiciona uma borda branca */
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.grade h1 {
+    font-size: 36px;
+    color: #333333;
+
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.reviews-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.reviews-title {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.review-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.review-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.33% - 20px);
+    /* 3 colunas em telas largas */
+    margin-bottom: 20px;
+}
+
+.review-heading {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.6;
+}
